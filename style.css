@@ -1,34 +1,134 @@
+/* --- GERAL E CORES BASE --- */
+:root {
+    --rosa-claro: #FFF0F5;      /* Fundo do corpo */
+    --rosa-medio: #FFC0CB;      /* Detalhes e bordas */
+    --rosa-escuro: #DB7093;     /* Títulos e links */
+    --texto-escuro: #4a4a4a;    /* Cor principal do texto */
+    --branco: #FFFFFF;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background-color: var(--rosa-claro);
+    color: var(--texto-escuro);
 }
 
+/* --- CABEÇALHO (HEADER) --- */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: var(--texto-escuro);
+    color: var(--branco);
     text-align: center;
+    padding: 30px 20px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 4px solid var(--rosa-medio);
+    object-fit: cover; /* Garante que a foto não fique distorcida */
+}
+
+header h1 {
+    margin: 10px 0 5px 0;
+    font-size: 2.5em;
+    color: var(--branco);
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info a {
+    color: var(--rosa-medio);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efeito suave na cor */
+}
+
+.contact-info a:hover {
+    color: var(--branco); /* Muda a cor ao passar o mouse */
+}
+
+
+/* --- CONTEÚDO PRINCIPAL (MAIN) --- */
+main {
+    max-width: 900px;
+    margin: 30px auto; /* Centraliza o conteúdo */
+    padding: 20px 40px;
+    background-color: var(--branco);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
 }
 
 section {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.projeto {
-    background: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
+/* Remove a borda da última seção */
+section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* --- TÍTULOS E TEXTOS --- */
+h2 {
+    font-size: 1.8em;
+    color: var(--rosa-escuro);
+    border-bottom: 3px solid var(--rosa-medio);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: var(--texto-escuro);
+    margin-bottom: 5px;
+}
+
+/* --- SEÇÕES ESPECÍFICAS --- */
+
+#curriculo .experience, #curriculo p {
+    margin-bottom: 20px;
+}
+
+#curriculo ul, #outros ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#curriculo ul li, #outros ul li {
+    background-color: var(--rosa-claro);
+    padding: 10px;
     border-radius: 5px;
+    margin-bottom: 8px;
 }
 
+#recomendacoes blockquote {
+    font-style: italic;
+    border-left: 5px solid var(--rosa-medio);
+    padding-left: 20px;
+    margin: 0;
+    color: #666;
+}
+
+/* --- RODAPÉ (FOOTER) --- */
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: var(--texto-escuro);
+    color: var(--branco);
 }
